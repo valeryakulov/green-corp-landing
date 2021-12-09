@@ -3,6 +3,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    background: white;
+    top: 0;
+    z-index: 1;
   }
   body {
     font-family: 'Raleway', sans-serif;
@@ -18,11 +22,7 @@ a {
     color: #213053;
   }
    
-  header a {
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .button {
+   .button {
     font-family: 'Raleway', sans—serif;
     font-size: 15px;
     color: #fff;
@@ -35,7 +35,7 @@ a {
   }
 
 
-  header a {
+  .header a {
     font-size: 15px;
     font-weight: 600;
     margin-right: 25px;
@@ -47,6 +47,8 @@ a {
   .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
+    position: absolute;
   }
   .about {
     display: flex;
@@ -172,4 +174,123 @@ a {
        .footer__links a {
         margin-bottom: 15px;
      }
-     
+     @keyframes rotation {0%{
+       transform: rotate(0);
+     }
+     100% {
+  transform: rotate(360deg);
+    }
+     }
+     @media (max-width: 720px) {
+      .features {
+          padding: 50px 10px;
+      }
+    
+      .cards {
+          grid-template-columns: auto;
+      }
+    
+      .features__feedback {
+          flex-direction: column;
+      }
+    
+      .features__feedback-left {
+          margin-right: 0;
+      }
+    
+      .features__feedback-left h2, .features__box h3 {
+          font-size: 36px;
+      }
+    
+      .features__feedback-right {
+          flex-direction: column;
+          align-items: initial;
+      }
+    
+      .features__savings-box {
+          margin-right: 0;
+          margin-bottom: 30px;
+      }
+      .promo {
+          flex-direction: column-reverse;
+      }
+    
+      .promo__right {
+          padding: 50px 10px;
+      }
+    
+      .promo__image {
+          width: 100%;
+          height: 500px;
+      }
+   }
+   
+   @media (max-width: 1024px) {
+      .about {
+          padding: 115px 20px;
+      }
+    
+      .about h1 {
+          font-size: 36px;
+          line-height: 40px;
+      }
+    
+      .about__image {
+          width: 280px;
+      }
+    
+      .about__sun-image {
+          width: 75px;
+          height: 75px;
+      }
+   }
+    
+   @media (max-width: 720px) {
+      header {
+          padding: 10px;
+      }
+    
+      .header__logo {
+          height: 20px;
+      }
+    
+      header a {
+          margin-right: 10px;
+      }
+    
+      .about {
+          flex-direction: column-reverse;
+          padding: 50px 10px;
+      }
+    
+      .about h1 {
+          font-size: 36px;
+          line-height: 40px;
+      }
+    
+      .about__image {
+          width: 280px;
+      }
+    
+      .about__sun-image {
+          width: 75px;
+          height: 75px;
+      }
+    
+      .form {
+          padding: 50px 10px;
+      }
+    
+      .form h1 {
+          font-size: 36px;
+      }
+    
+      footer {
+          padding: 50px 10px;
+      }
+    
+      .footer__container {
+          flex-direction: column;
+      }
+   }
+   
